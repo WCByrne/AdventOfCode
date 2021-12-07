@@ -1,4 +1,5 @@
-import UIKit
+import Foundation
+import QuartzCore
 import AOCUtils
 /*:
  # Day 7
@@ -9,51 +10,52 @@ let data = try! loadData(example: false)
     .map { $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) }
     .compactMap { Int($0) }
 
+let lowerBound = data.min()!
+let upperBound = data.max()!
+let range = lowerBound...upperBound
+
 run(part: 1) {
-    let lowerBound = data.min()!
-    let upperBound = data.max()!
     
-    var lowestConsumption = (lowerBound, Int.max)
-    for target in lowerBound...upperBound {
-        
-        let consumption = data.reduce(0) { res, startingPosition in
-            return res + abs(startingPosition - target)
-        }
-        if consumption < lowestConsumption.1 {
-            lowestConsumption = (target, consumption)
-        }
+    func cost(target: Int) -> Int {
+        return data
+            .map { abs($0 - target) }
+            .reduce(0, +)
     }
-    return "The most efficient position is \(lowestConsumption.0) which will consume \(lowestConsumption.1) fuel"
+    
+    let lowestCost = range
+        .lazy
+        .map { ($0, cost(target: $0)) }
+        .min { $0.1 < $1.1 }!
+    
+    return "The most efficient position is \(lowestCost.0) which will consume \(lowestCost.1) fuel"
 }
 
 run(part: 2) {
-    let lowerBound = data.min()!
-    let upperBound = data.max()!
-    
     var costCache = [Int:Int]()
     
-    var lowestConsumption = (lowerBound, Int.max)
-    for target in lowerBound...upperBound {
-        
-        let consumption = data.reduce(0) { res, startingPosition in
-            let delta = abs(startingPosition - target)
-            if let c = costCache[delta] {
-                return res + c
-            } else if delta > 0 {
-                let cost = costCache[delta] ?? (1...delta).reduce(0) { partialResult, step in
-                    return partialResult + step
-                }
-                costCache[delta] = cost
-                return res + cost
-            } else {
-                return res
-            }
-        }
-        if consumption < lowestConsumption.1 {
-            lowestConsumption = (target, consumption)
+    func cost(for moves: Int) -> Int {
+        if (moves == 0) { return 0 }
+        if let c = costCache[moves] {
+            return c
+        } else {
+            let c = (1...moves).reduce(0, +)
+            costCache[moves] = c
+            return c
         }
     }
     
-    return "The most efficient position is \(lowestConsumption.0) which will consume \(lowestConsumption.1) fuel"
+    let time = CACurrentMediaTime()
+    let lowestCost = range.lazy.map { target -> (Int, Int) in
+        let cost = data
+            .lazy
+            .map { abs($0 - target) }
+            .map { cost(for: $0) }
+            .reduce(0, +)
+        return (target, cost)
+    }.min { $0.1 < $1.1 }!
+    
+    print(CACurrentMediaTime() - time)
+    
+    return "The most efficient position is \(lowestCost.0) which will consume \(lowestCost.1) fuel"
 }
 

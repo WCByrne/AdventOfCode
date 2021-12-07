@@ -34,11 +34,7 @@ run(part: 2) {
             parts[i].append(v)
         }
         if parts[0].count == cohortSize {
-            let full = parts.removeFirst()
-            let newCohort = full.reduce(0) { res, val in
-                return res + val
-            }
-            
+            let newCohort = parts.removeFirst().reduce(0, +)
             cohorts.append(newCohort)
         }
         if parts.count < 3 {

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='macos' display-mode='rendered' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='Day 1'/>
-        <page name='Day 2'/>
-        <page name='Day 3'/>
-        <page name='Day 4'/>
-        <page name='Day 5'/>
-        <page name='Day 6'/>
-        <page name='Day 7'/>
-        <page name='Day 8'/>
-        <page name='Day 9'/>
+        <page name='Day 01'/>
+        <page name='Day 02'/>
+        <page name='Day 03'/>
+        <page name='Day 04'/>
+        <page name='Day 05'/>
+        <page name='Day 06'/>
+        <page name='Day 07'/>
+        <page name='Day 08'/>
+        <page name='Day 09'/>
         <page name='Day 10'/>
         <page name='Day 11'/>
         <page name='Day 12'/>
