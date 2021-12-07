@@ -27,8 +27,8 @@ let moves: [Move] = data.map {
         distance: Int(parts[1])!)
 }
 
-// part 1
-func part1() {
+
+run(part: 1) {
     var depth = 0
     var position = 0
     
@@ -40,13 +40,13 @@ func part1() {
         }
     }
     
-    print("depth \(depth)")
-    print("position \(position)")
-    print("answer \(depth * position)")
+    print("Depth: \(depth)")
+    print("Position: \(position)")
+    return "Result: \(depth * position)"
 }
-part1()
 
-func part2() {
+
+run(part: 2) {
     var depth = 0
     var aim = 0
     var position = 0
@@ -61,8 +61,8 @@ func part2() {
         }
     }
 
-    print("depth \(depth)")
-    print("position \(position)")
-    print("answer \(depth * position)")
+    print("Depth \(depth)")
+    print("Position: \(position)")
+    return "Result: \(depth * position)"
 }
-part2()
+

@@ -9,8 +9,7 @@ let data = try! loadData(example: false)
     .map { $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) }
     .compactMap { Int($0) }
 
-func simulate(days: Int) {
-    
+func fishAfter(days: Int) -> String {
     var generations = data.reduce(into: [Int:Int](), { res, age in
         res[age] = (res[age] ?? 0) + 1
     })
@@ -30,8 +29,9 @@ func simulate(days: Int) {
     let count = generations.values.reduce(0) { res, count in
         return res + count
     }
-    print("Fish after \(days) days: \(count)")
+    return "Fish after \(days) days: \(count)"
 }
 
-simulate(days: 80)
-simulate(days: 256)
+
+run(part: 1) { fishAfter(days: 80) }
+run(part: 2) { fishAfter(days: 256) }

@@ -10,20 +10,16 @@ let data = try! loadData(example: false)
 
 // MARK: - Part 1
 /*-------------------------------------------------------------------------------*/
-func part1() {
-    print("Part 2 ----")
-    
+run(part: 1) {
     let result = 0
-    print("The result is \(result)")
+    return "The result is \(result)"
 }
-part1()
+
 
 // MARK: - Part 1
 /*-------------------------------------------------------------------------------*/
-func part2() {
-    print("Part 2 ----")
-    
+run(part: 2) {
     let result = 0
-    print("The result is \(result)")
+    return "The result is \(result)"
 }
-part2()
+

@@ -9,11 +9,7 @@ let data = try! loadData(example: false)
     .map { $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) }
     .compactMap { Int($0) }
 
-// 343441
-func part1() {
-    print("Part 1 ----")
-    
-    
+run(part: 1) {
     let lowerBound = data.min()!
     let upperBound = data.max()!
     
@@ -27,17 +23,10 @@ func part1() {
             lowestConsumption = (target, consumption)
         }
     }
-    
-    print("The most efficient position is \(lowestConsumption.0) which will consume \(lowestConsumption.1) fuel")
+    return "The most efficient position is \(lowestConsumption.0) which will consume \(lowestConsumption.1) fuel"
 }
-part1()
 
-
-//98925151
-func part2() {
-    print("Part 2 ----")
-    
-    
+run(part: 2) {
     let lowerBound = data.min()!
     let upperBound = data.max()!
     
@@ -65,6 +54,5 @@ func part2() {
         }
     }
     
-    print("The most efficient position is \(lowestConsumption.0) which will consume \(lowestConsumption.1) fuel")
+    return "The most efficient position is \(lowestConsumption.0) which will consume \(lowestConsumption.1) fuel"
 }
-part2()

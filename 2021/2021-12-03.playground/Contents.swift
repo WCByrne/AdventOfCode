@@ -6,6 +6,7 @@ import AOCUtils
  */
 let data = try! loadData(example: false)
     .split(separator: "\n")
+    .map { String($0) }
     .filter { !$0.isEmpty }
 
 func countElements(in array: [Int]) -> [Int: Int] {
@@ -51,8 +52,7 @@ func generateColumns(from data: [String]) -> [[Int]] {
 }
 
 
-func part1() {
-    print("Part 1 ----")
+run(part: 1) {
     let columns = generateColumns(from: data)
     let gamma = columns.reduce("") { partialResult, col in
         partialResult.appending("\(mostComonValue(in: col))")
@@ -64,15 +64,13 @@ func part1() {
     let gInt = Int(gamma, radix: 2)!
     let eInt = Int(epsilon, radix: 2)!
     
-    print("\(gamma) - \(gInt)")
-    print("\(epsilon) - \(eInt)")
+    print("Gamma: \(gamma) - \(gInt)")
+    print("Epsilon: \(epsilon) - \(eInt)")
           
-    print("Answer: \(gInt * eInt)")
+    return "Answer: \(gInt * eInt)"
 }
-part1()
 
-func part2() {
-    print("Part 2 ----")
+run(part: 2) {
     
     func calculateRating(validator: ([Int]) -> Int) -> String {
         var entries = data
@@ -94,15 +92,13 @@ func part2() {
     }
     
     let o2 = calculateRating { mostComonValue(in: $0) }
-    let scrubber = calculateRating { leastCommentValue(in: $0) }
+    let cO2 = calculateRating { leastCommentValue(in: $0) }
     
     let o2Int = Int(o2, radix: 2)!
-    let scrubberInt = Int(scrubber, radix: 2)!
+    let coO2Int = Int(cO2, radix: 2)!
     
-    print("\(o2) - \(o2Int)")
-    print("\(scrubber) - \(scrubberInt)")
+    print("o2: \(o2) - \(o2Int)")
+    print("cO2: \(cO2) - \(coO2Int)")
           
-    print("Answer: \(o2Int * scrubberInt)")
+    return "Answer: \(o2Int * coO2Int)"
 }
-
-part2()

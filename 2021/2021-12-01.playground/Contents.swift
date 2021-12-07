@@ -19,13 +19,12 @@ func numIncreases(values: [Int]) -> Int {
     return count
 }
 
-func part1() {
+run(part: 1) {
     let overallIncreases = numIncreases(values: data)
-    print("Overall increases: \(overallIncreases)")
+    return "Overall increases: \(overallIncreases)"
 }
-part1()
 
-func part2() {
+run(part: 2) {
     var cohorts = [Int]()
     let cohortSize = 3
     var parts: [[Int]] = [[]]
@@ -34,7 +33,6 @@ func part2() {
         for i in 0..<parts.count {
             parts[i].append(v)
         }
-        print(parts)
         if parts[0].count == cohortSize {
             let full = parts.removeFirst()
             let newCohort = full.reduce(0) { res, val in
@@ -48,6 +46,5 @@ func part2() {
         }
     }
     let cohortIncreases = numIncreases(values: cohorts)
-    print("Overall increases: \(cohortIncreases)")
+    return "Overall increases: \(cohortIncreases)"
 }
-part2()

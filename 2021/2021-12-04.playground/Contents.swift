@@ -9,7 +9,6 @@ class Board: CustomDebugStringConvertible {
     let columns: [[Int]]
     
     init(data: [String]) {
-        print(data)
         let rows = data.map { rowInput in
                     rowInput.split(separator: " ")
                         .map { Int($0)! }
@@ -26,11 +25,12 @@ class Board: CustomDebugStringConvertible {
     }
     
     var debugDescription: String {
-        return self.rows.map { row in
+        let str = self.rows.map { row in
             return row.map { String($0) }
             .map { $0.count < 2 ? " \($0)" : $0 }
             .joined(separator:  " ")
         }.joined(separator: "\n")
+        return "\n--------------\n\(str)\n--------------\n"
     }
     
     func isComplete(with calledNumbers: Set<Int>) -> Bool {
@@ -61,71 +61,65 @@ let calledNumbers = data.removeFirst()
     .split(separator: ",")
     .map { Int($0)! }
 
-var boards = [Board]()
-var previousLines = [String]()
 
-for line in data {
-    // We have a full boarf
-    if !line.isEmpty {
-        previousLines.append(String(line))
+func createBoards() -> [Board] {
+    var boards = [Board]()
+    var previousLines = [String]()
+    for line in data {
+        // We have a full boarf
+        if !line.isEmpty {
+            previousLines.append(String(line))
+        }
+        if previousLines.count == 5 {
+            boards.append(Board(data: previousLines))
+            previousLines.removeAll()
+        }
     }
-    if previousLines.count == 5 {
-        boards.append(Board(data: previousLines))
-        previousLines.removeAll()
-    }
+    return boards
 }
-print("The boards -------")
-print(boards
-        .map { $0.debugDescription }
-        .joined(separator: "\n\n")
-)
 
-func part1() {
-    print("Part 1 -------")
+var boards = createBoards()
+
+run(part: 1) {
     var verifySet = Set<Int>()
     for num in calledNumbers {
         verifySet.insert(num)
-        print("Called numbers: \(verifySet)")
         for board in boards {
             let score = board.verify(with: verifySet)
             if score > 0  {
                 print(board)
-                print("Winner: \(score)")
-                print(score * num)
-                return
+                print("The winning board had a score of: \(score)")
+                print("The last number called was \(num)")
+                return "Answer: \(score * num)"
             }
         }
     }
+    return "Something went wrong. No board appears to have won"
 }
-part1()
 
-
-func part2() {
-    print("Part 2 -------")
+run(part: 2) {
     var remainingBoards = boards
     
     var verifySet = Set<Int>()
     for num in calledNumbers {
         verifySet.insert(num)
         if remainingBoards.count > 1 {
-            print("Called numbers: \(verifySet)")
             remainingBoards.removeAll { $0.isComplete(with: verifySet) }
         }
-        
         
         if remainingBoards.count == 1 {
             let board = remainingBoards[0]
             let score = board.verify(with: verifySet)
             if score > 0  {
                 print(board)
-                print("Last winner: \(score)")
-                print(score * num)
-                return
+                print("The winning board had a score of: \(score)")
+                print("The last number called was \(num)")
+                return "Score: \(score * num)"
             }
         } else if remainingBoards.isEmpty {
-            print("Something went wrong....")
-            return
+            return "Something went wrong...."
         }
     }
+    return "Something went wrong. No board appears to have won"
 }
-part2()
+

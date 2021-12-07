@@ -64,9 +64,7 @@ struct Line: CustomDebugStringConvertible {
 
 let lines = data.map { Line(string: String($0)) }
 
-func part1() {
-    print("Part 1 ---")
-    
+run(part: 1) {
     var points = [Point: Int]()
     let validLines = lines.filter { !$0.isDiagonal }
     for line in validLines {
@@ -77,12 +75,11 @@ func part1() {
     let count = points.values.reduce(0) { partialResult, pointCount in
         return partialResult + (pointCount > 1 ? 1 : 0)
     }
-    print("Points with intersections: \(count)")
+    return "Points with intersections: \(count)"
 }
-part1()
 
-func part2() {
-    print("Part 2 ---")
+
+run(part: 2) {
     var points = [Point: Int]()
     for line in lines {
         for p in line.points {
@@ -92,7 +89,7 @@ func part2() {
     let count = points.values.reduce(0) { partialResult, pointCount in
         return partialResult + (pointCount > 1 ? 1 : 0)
     }
-    print("Points with intersections: \(count)")
+    return "Points with intersections: \(count)"
 }
-part2()
+
 

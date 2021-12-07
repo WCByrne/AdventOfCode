@@ -15,3 +15,10 @@ public func loadData(example: Bool) throws -> String {
     }
     return try String(contentsOf: inputFileUrl)
 }
+
+public func run(part: Int, block: () -> String) {
+    print("Part \(part) -----")
+    let result = block()
+    print(result)
+    print("\n")
+}
