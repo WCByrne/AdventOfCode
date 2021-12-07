@@ -1,17 +1,12 @@
 import UIKit
-
-let useExample = false
-guard let inputFileUrl = Bundle.main.url(forResource: useExample ? "exampleInput" : "input",
-                                         withExtension: "txt") else {
-    print("Error")
-    abort()
-}
-
-let inputString = try! String(contentsOf: inputFileUrl)
-var data = inputString
-    .split(separator: ",")
-    .map { $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) }
-    .compactMap { Int($0) }
+import AOCUtils
+/*:
+ # Day 21
+ [https://adventofcode.com/2021/day/21](https://adventofcode.com/2021/day/21)
+ */
+let data = try! loadData(example: false)
+    .trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    .split(separator: "\n")
 
 // MARK: - Part 1
 /*-------------------------------------------------------------------------------*/

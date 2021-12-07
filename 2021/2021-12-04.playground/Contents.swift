@@ -1,27 +1,9 @@
 import UIKit
-
-
-let useExample = false
-
-guard let inputFileUrl = Bundle.main.url(forResource: useExample ? "exampleInput" : "input",
-                                         withExtension: "txt") else {
-    print("Error")
-    abort()
-}
-//guard let inputFileUrl = Bundle.main.url(forResource: "input", withExtension: "txt") else {
-//    print("Error")
-//    abort()
-//}
-let inputString = try! String(contentsOf: inputFileUrl)
-var data = inputString
-    .split(separator: "\n")
-
-let calledNumbers = data.removeFirst()
-    .split(separator: ",")
-    .map { Int($0)! }
-
-
-
+import AOCUtils
+/*:
+ # Day 4
+ [https://adventofcode.com/2021/day/4](https://adventofcode.com/2021/day/4)
+ */
 class Board: CustomDebugStringConvertible {
     let rows: [[Int]]
     let columns: [[Int]]
@@ -71,6 +53,13 @@ class Board: CustomDebugStringConvertible {
         }
     }
 }
+
+var data = try! loadData(example: false)
+    .split(separator: "\n")
+
+let calledNumbers = data.removeFirst()
+    .split(separator: ",")
+    .map { Int($0)! }
 
 var boards = [Board]()
 var previousLines = [String]()

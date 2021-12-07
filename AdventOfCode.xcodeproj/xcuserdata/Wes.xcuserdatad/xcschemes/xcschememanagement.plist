@@ -599,6 +599,11 @@
 			<key>orderHint</key>
 			<integer>79</integer>
 		</dict>
+		<key>AOCUtils.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>82</integer>
+		</dict>
 	</dict>
 </dict>
 </plist>
