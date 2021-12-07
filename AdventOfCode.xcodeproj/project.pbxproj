@@ -12,33 +12,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DE66E464275FCF2C00AE3960 /* 2021-12-08.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-08.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E466275FD18700AE3960 /* 2021-12-09.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-09.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E467275FD18B00AE3960 /* 2021-12-10.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-10.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E468275FD18D00AE3960 /* 2021-12-11.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-11.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E469275FD19000AE3960 /* 2021-12-12.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-12.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E46A275FD19200AE3960 /* 2021-12-13.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-13.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E46B275FD19400AE3960 /* 2021-12-14.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-14.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E46C275FD19700AE3960 /* 2021-12-15.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-15.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E46D275FD19A00AE3960 /* 2021-12-16.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-16.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E46E275FD1A200AE3960 /* 2021-12-17.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-17.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E46F275FD1A500AE3960 /* 2021-12-18.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-18.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E470275FD1A800AE3960 /* 2021-12-19.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-19.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E471275FD1AA00AE3960 /* 2021-12-20.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-20.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E472275FD1B000AE3960 /* 2021-12-21.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-21.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E473275FD1B200AE3960 /* 2021-12-22.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-22.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E474275FD1B700AE3960 /* 2021-12-24.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-24.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DE66E475275FD1B900AE3960 /* 2021-12-25.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-25.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DE66E477275FD29900AE3960 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DE66E47D275FD2F700AE3960 /* AOCUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AOCUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE66E480275FD2F700AE3960 /* AOCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOCUtils.h; sourceTree = "<group>"; };
-		DEB71591275974A200683DB2 /* 2021-12-01.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-01.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DEB7159227597B3100683DB2 /* 2021-12-02.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-02.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DEB71593275A664400683DB2 /* 2021-12-03.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-03.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DEB71594275B2E4300683DB2 /* 2021-12-04.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-04.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DEB71595275E6D0E00683DB2 /* 2021-12-05.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-05.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DEB71596275FBBC700683DB2 /* 2021-12-06.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-06.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DEB71597275FC7F100683DB2 /* 2021-12-07.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2021-12-07.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DEB71591275974A200683DB2 /* 2021.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = 2021.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,37 +29,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE66E465275FD15100AE3960 /* 2021 */ = {
-			isa = PBXGroup;
-			children = (
-				DEB71591275974A200683DB2 /* 2021-12-01.playground */,
-				DEB7159227597B3100683DB2 /* 2021-12-02.playground */,
-				DEB71593275A664400683DB2 /* 2021-12-03.playground */,
-				DEB71594275B2E4300683DB2 /* 2021-12-04.playground */,
-				DEB71595275E6D0E00683DB2 /* 2021-12-05.playground */,
-				DEB71596275FBBC700683DB2 /* 2021-12-06.playground */,
-				DEB71597275FC7F100683DB2 /* 2021-12-07.playground */,
-				DE66E464275FCF2C00AE3960 /* 2021-12-08.playground */,
-				DE66E466275FD18700AE3960 /* 2021-12-09.playground */,
-				DE66E467275FD18B00AE3960 /* 2021-12-10.playground */,
-				DE66E468275FD18D00AE3960 /* 2021-12-11.playground */,
-				DE66E469275FD19000AE3960 /* 2021-12-12.playground */,
-				DE66E46A275FD19200AE3960 /* 2021-12-13.playground */,
-				DE66E46B275FD19400AE3960 /* 2021-12-14.playground */,
-				DE66E46C275FD19700AE3960 /* 2021-12-15.playground */,
-				DE66E46D275FD19A00AE3960 /* 2021-12-16.playground */,
-				DE66E46E275FD1A200AE3960 /* 2021-12-17.playground */,
-				DE66E46F275FD1A500AE3960 /* 2021-12-18.playground */,
-				DE66E470275FD1A800AE3960 /* 2021-12-19.playground */,
-				DE66E471275FD1AA00AE3960 /* 2021-12-20.playground */,
-				DE66E472275FD1B000AE3960 /* 2021-12-21.playground */,
-				DE66E473275FD1B200AE3960 /* 2021-12-22.playground */,
-				DE66E474275FD1B700AE3960 /* 2021-12-24.playground */,
-				DE66E475275FD1B900AE3960 /* 2021-12-25.playground */,
-			);
-			path = 2021;
-			sourceTree = "<group>";
-		};
 		DE66E47E275FD2F700AE3960 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				DE66E47F275FD2F700AE3960 /* AOCUtils */,
-				DE66E465275FD15100AE3960 /* 2021 */,
+				DEB71591275974A200683DB2 /* 2021.playground */,
 				DE66E47E275FD2F700AE3960 /* Products */,
 			);
 			sourceTree = "<group>";
